@@ -1,0 +1,10 @@
+certifi==2020.6.20
+click==7.1.2
+Flask==1.1.2
+Flask-Cors==3.0.9
+gunicorn==20.0.4
+itsdangerous==1.1.0
+Jinja2==2.11.2
+MarkupSafe @ file:///opt/concourse/worker/volumes/live/cb778296-98db-45ad-411e-6f726e102dc3/volume/markupsafe_1594371638608/work
+six==1.15.0
+Werkzeug==1.0.1

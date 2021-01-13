@@ -1,0 +1,111 @@
+{
+    "kinomatics":{
+        "equations":{
+            "displacement":{
+                "initial velocity":"(fv*t) - ((1/2)*a*(t*t))",
+                "final velocity":"(iv*t) + ((1/2)*a*(t*t))",
+                "acceleration":"(t/2) * (iv+fv)",
+                "time":"((iv*iv)+(fv*fv)) / (2*a)"
+            },
+            "initial velocity":{
+                "displacement":"fv - (a*t)",
+                "final velocity":"(x/t) - ((1/2)*a*t)",
+                "acceleration":"((2*x)/t) + fv",
+                "time":"math.sqrt((fv*fv) - (2*a*x))"
+            },
+            "final velocity":{
+                "displacement":"iv + (a*t)",
+                "initial velocity":"(x+(a*t*t)) / (2*t)",
+                "acceleration":"((2*x)/t) - (iv)",
+                "time":"math.sqrt((iv*iv) + (2*a*x))"
+            },
+            "acceleration":{
+                "displacement":"(fv-iv) / t",
+                "initial velocity":"(2*(fv*t-x)) / (t*t)",
+                "final velocity":"(2*(x-(iv*t))) / (t*t)",
+                "time":"((fv*fv)-(iv*iv)) / (2*x)"
+            },
+            "time":{
+                "displacement":"(fv-iv) / a",
+                "initial velocity":"(fv-math.sqrt((fv*fv)-2*a*x)) / a",
+                "final velocity":"(math.sqrt((2*a*x)+(iv*iv))-(iv)) / a",
+                "acceleration":"(2*x) / (iv+fv)"
+            }
+        },
+        "variables":{
+            "necessary":3,
+            "type":{
+                "displacement":"x",
+                "initial velocity":"iv",
+                "final velocity":"fv",
+                "acceleration":"a",
+                "time":"t"
+            }
+        }
+    },
+    "forces":{
+        "equations":{
+            "force":"m*a",
+            "mass":"F/a",
+            "acceleration":"F/m"
+        },
+        "variables":{
+            "necessary":2,
+            "type":{
+                "force":"F",
+                "mass":"m",
+                "acceleration":"a"
+            }
+        }
+    },
+    "gravitation":{
+        "equations":{
+            "force":"((6.67*pow(10,-11))*m1*m2) / (r*r)",
+            "mass1":"(f*(r*r)) / (m2*(6.67*pow(10,-11)))",
+            "mass2":"(f*(r*r)) / (m1*(6.67*pow(10,-11)))",
+            "radius":"math.sqrt(((6.67*pow(10,-11))*m1*m2) / f)"
+        },
+        "variables":{
+            "necessary":3,
+            "type":{
+                "force":"f",
+                "mass1":"m1",
+                "mass2":"m2",
+                "radius":"r"
+            }
+        }
+    },
+    "circular":{
+        "equations":{
+            "force":"(m*(v*v)) / r",
+            "mass":"(f*r) / (v*v)",
+            "velocity":"math.sqrt((f*r)/m)",
+            "radius":"(m*(v*v)) / f"
+        },
+        "variables":{
+            "necessary":3,
+            "type":{
+                "force":"f",
+                "mass":"m",
+                "velocity":"v",
+                "radius":"r"
+            }
+        }
+    },
+    "work":{
+        "equations":{
+            "work":"F*s",
+            "force":"W/s",
+            "displacement":"W/F"
+        },
+        "variables":{
+            "necessary":2,
+            "type":{
+                "work":"W",
+                "force":"F",
+                "displacement":"s"
+            }
+        }
+    }
+
+}

@@ -1,0 +1,14 @@
+{
+	"displacement":"m",
+	"initial velocity":"m/s",
+	"final velocity":"m/s",
+	"acceleration":"m/s^2",
+	"time":"s",
+	"force":"N",
+	"mass":"kg",
+	"mass1":"kg",
+	"mass2":"kg",
+	"radius":"m",
+	"velocity":"m/s",
+	"work":"J"	
+}
