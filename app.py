@@ -27,7 +27,7 @@ def unit():
 	global file, unit
 	unit = request.args.get("unit")
 
-	with open('./Equations.json') as f:
+	with open('Equations.json') as f:
 		file = json.load(f)
 	file = file[unit]
 
@@ -160,7 +160,7 @@ def kinomatics():
 
 
 def prettyAns(ans, subject):
-	with open('./Units.json') as u:
+	with open('Units.json') as u:
 		units = json.load(u)
 
 	ans = roundNum(ans)
