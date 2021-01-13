@@ -15,7 +15,7 @@
             },
             "final velocity":{
                 "displacement":"iv + (a*t)",
-                "initial velocity":"(2x+(a*t*t)) / (2*t)",
+                "initial velocity":"(2*x+(a*t*t)) / (2*t)",
                 "acceleration":"((2*x)/t) - (iv)",
                 "time":"math.sqrt((iv*iv) + (2*a*x))"
             },
