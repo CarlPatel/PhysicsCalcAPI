@@ -5,7 +5,7 @@
                 "initial velocity":"(fv*t) - ((1/2)*a*(t*t))",
                 "final velocity":"(iv*t) + ((1/2)*a*(t*t))",
                 "acceleration":"(t/2) * (iv+fv)",
-                "time":"((iv*iv)+(fv*fv)) / (2*a)"
+                "time":"((iv*iv)-(fv*fv)) / (2*a)"
             },
             "initial velocity":{
                 "displacement":"fv - (a*t)",
