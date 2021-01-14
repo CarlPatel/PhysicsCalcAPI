@@ -18,7 +18,7 @@ app = Flask(__name__)
 def unit():
 	"""
 	link: www.api.com/api?force=1&mass=2
-	http://localhost:5000/api?unit=kinomatics&final%20velocity=3&displacement=3&initial%20velocity=-4
+	http://localhost:5000/api?unit=kinematics&final%20velocity=3&displacement=3&initial%20velocity=-4
 	http://localhost:5000/api?unit=forces&acceleration=2&force=3
 	http://localhost:5000/api?unit=gravitation&mass1=2&radius=3&mass2=5
 
@@ -31,8 +31,8 @@ def unit():
 		file = json.load(f)
 	file = file[unit]
 
-	if unit == "kinomatics":
-		return kinomatics()
+	if unit == "kinematics":
+		return kinematics()
 	else:
 		return only1Ans()
 
@@ -91,7 +91,7 @@ def only1Ans():
 
 
 
-def kinomatics():
+def kinematics():
 	
 	variables = file["variables"]["type"]
 	numOfVariables = 0
@@ -184,7 +184,7 @@ def roundNum(num):
 
 def getEquation(subject, without=None):
 	equations = file["equations"]
-	if unit == "kinomatics":
+	if unit == "kinematics":
 		return [equations[subject[0]][without[0]],equations[subject[1]][without[1]]]
 	else:
 		return [equations[subject[0]]]
@@ -192,7 +192,7 @@ def getEquation(subject, without=None):
 
 def getEquationPretty(subject, without=None):
 	equations = file["equations"]
-	if unit == "kinomatics":
+	if unit == "kinematics":
 		Equations = [equations[subject[0]][without[0]],equations[subject[1]][without[1]]]
 	else:
 		Equations = [equations[subject[0]]]
@@ -206,7 +206,7 @@ def getEquationPretty(subject, without=None):
 
 def EquationWithNumbers(subject, without=None):
 	variables = file["variables"]["type"]
-	if unit == "kinomatics":
+	if unit == "kinematics":
 		Equations = getEquation(subject,without)
 	else:
 		Equations = getEquation(subject)
@@ -229,7 +229,7 @@ def EquationWithNumbers(subject, without=None):
 
 
 def format(solvedFor1, ans1, equation, equationwithnumbers, solvedFor2=None, ans2=None):
-	if unit == "kinomatics":
+	if unit == "kinematics":
 		return jsonify({
 			"Status":"success",
 			"SolvedFor1": str(solvedFor1),
