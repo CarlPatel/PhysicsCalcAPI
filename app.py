@@ -9,7 +9,7 @@ import math
 app = Flask(__name__) 
 #app.secret_key = "asdf"
 
-@app.route("/", methods=["GET"])
+@app.route("PhysicsCalcAPI/", methods=["GET"])
 
 @cross_origin(supports_credentials=True)
 
