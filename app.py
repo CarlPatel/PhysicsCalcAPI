@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, make_response, json
-#from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 import math
 import os
 
@@ -8,6 +8,8 @@ import os
 
 
 app = Flask(__name__) 
+CORS(app)  # This will enable CORS for all routes
+
 #app.secret_key = "asdf"
 
 @app.route("/api", methods=["GET"])
