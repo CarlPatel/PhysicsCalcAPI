@@ -8,7 +8,7 @@ import os
 
 
 app = Flask(__name__) 
-CORS(app)  # This will enable CORS for all routes
+CORS(app, supports_credentials=True, origins=["https://carlpatel.github.io"])
 
 #app.secret_key = "asdf"
 
