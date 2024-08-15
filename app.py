@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, make_response, json
-from flask_cors import CORS, cross_origin
+#from flask_cors import CORS, cross_origin
 import math
 
 
@@ -9,9 +9,9 @@ import math
 app = Flask(__name__) 
 #app.secret_key = "asdf"
 
-@app.route("PhysicsCalcAPI/", methods=["GET"])
+@app.route("/api", methods=["GET"])
 
-@cross_origin(supports_credentials=True)
+#@cross_origin(supports_credentials=True)
 
 
 
@@ -263,6 +263,5 @@ def response(code, data):
 
 
 if __name__ == "__main__":
-	app.debug = True
-	app.run("localhost", 5000)
+	app.run(debug=True)
 	
